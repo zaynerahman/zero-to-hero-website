@@ -1,0 +1,293 @@
+/* style.css (Glow background + glass sections) */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+
+  /* Premium soft glow background */
+  background:
+    radial-gradient(circle at 20% 20%, #eef2ff, transparent 40%),
+    radial-gradient(circle at 80% 60%, #e0f2fe, transparent 40%),
+    #f9fafb;
+}
+
+/* ===== TOP BAR (3-column layout) ===== */
+.topbar {
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* left | center | right */
+  align-items: center;
+  padding: 16px 40px;
+  background-color: black;
+  color: white;
+}
+
+.topbar-left {
+  justify-self: start;
+}
+
+.topbar-center {
+  justify-self: center; /* PERFECT center */
+}
+
+.topbar-right {
+  justify-self: end; /* nav to far right */
+  display: flex;
+  gap: 16px;
+}
+
+/* Nav links */
+.topbar-right a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.topbar-right a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Logo size */
+.logo-img {
+  height: 120px; /* change if you want */
+  width: auto;
+  display: block;
+}
+
+/* Badge */
+.brand-badge {
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 10px 14px;
+  text-align: center;
+  max-width: 360px;
+
+  /* subtle glow */
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.18);
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(6px);
+}
+
+.site-title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.tagline {
+  margin: 6px 0 0 0;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+/* ===== PAGE CONTENT CENTERING ===== */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ===== HERO (glass card) ===== */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+
+  border-radius: 16px;
+  margin: 40px auto;
+  max-width: 900px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 12px auto 0 auto;
+  line-height: 1.5;
+}
+
+/* CTA LINK */
+.cta-button {
+  display: inline-block;
+  padding: 14px 22px;
+  font-size: 16px;
+  font-weight: 600;
+
+  background-color: black;
+  color: white;
+  text-decoration: none;
+
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.14);
+  transition: 0.2s ease;
+
+  margin-top: 20px;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.18);
+}
+
+/* ===== CATEGORIES (glass card) ===== */
+.categories {
+  text-align: center;
+  padding: 60px 20px;
+
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+
+  border-radius: 16px;
+  margin: 40px auto;
+  max-width: 900px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  max-width: 700px;
+  margin: 30px auto 0 auto;
+}
+
+.category-card {
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  background: white;
+}
+
+.category-card:hover {
+  background: black;
+  color: white;
+  border-color: black;
+}
+
+/* ===== COURSE LIST ===== */
+.course-list {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.level-title {
+  margin: 30px auto 10px auto;
+  max-width: 800px;
+  text-align: left;
+  padding: 0 10px;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 800px;
+  margin: 20px auto 0 auto;
+}
+
+.course-card {
+  border-radius: 14px;
+  padding: 20px;
+  text-align: left;
+  transition: 0.25s ease;
+
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(8px);
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+.course-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+.course-card h3 {
+  margin-top: 0;
+}
+
+.course-link {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 10px 16px;
+
+  background: black;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+
+  border-radius: 10px;
+  transition: 0.2s ease;
+}
+
+.course-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.course-link:hover {
+  text-decoration: underline;
+}
+
+/* ===== EMAIL SECTION (glass card) ===== */
+.email-section {
+  text-align: center;
+  padding: 60px 20px;
+
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+
+  border-radius: 16px;
+  margin: 40px auto;
+  max-width: 900px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.email-section p {
+  max-width: 700px;
+  margin: 12px auto 0 auto;
+  line-height: 1.5;
+}
+
+.email-form {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.email-form input {
+  padding: 12px;
+  width: 260px;
+  border: 1px solid #ccc;
+}
+
+.email-form button {
+  padding: 12px 20px;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.8;
+}

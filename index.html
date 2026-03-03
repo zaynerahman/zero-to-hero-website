@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zero to Hero</title>
+  <link rel="stylesheet" href="./style.css?v=1" />
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="topbar-left">
+      <img class="logo-img" src="images/Logo.png" alt="Zero to Hero logo" />
+    </div>
+
+    <div class="topbar-center">
+      <div class="brand-badge">
+        <h1 class="site-title">Zero to Hero</h1>
+        <p class="tagline">
+          Online learning to master that lucrative career skill, ace that study exam, or become the expert in your field
+        </p>
+      </div>
+    </div>
+
+    <nav class="topbar-right">
+      <a href="index.html">Home</a>
+      <a href="#courses">Courses</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Upskill. Grow. Advance.</h2>
+      <p>
+        Discover online courses designed to help you grow your career,
+        strengthen your academic performance, or build valuable new skills
+        in Technology, Data, Business & Finance, and Digital Marketing.
+      </p>
+      <a href="#signup" class="cta-button">Explore Learning Paths</a>
+    </section>
+
+    <section class="categories" id="courses">
+      <h2>Explore Learning Categories</h2>
+
+      <div class="category-grid">
+        <a class="category-card" href="technology.html">Technology</a>
+        <a class="category-card" href="data.html">Data & Analytics</a>
+        <a class="category-card" href="business-finance.html">Business & Finance</a>
+        <a class="category-card" href="digital-marketing.html">Digital Marketing</a>
+      </div>
+    </section>
+
+    <section class="email-section" id="signup">
+      <h2>Find the Right Course for Your Future</h2>
+      <p>
+        Get personalised recommendations for online courses that can help
+        you advance your career, support your studies, or expand your skillset.
+      </p>
+
+      <div class="email-form">
+        <input type="email" placeholder="Enter your email" />
+        <button type="button">Get Recommendations</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© Zero to Hero — Helping learners build future-ready skills.</p>
+    <p>
+      Disclaimer: Some links on this site may be affiliate links. If you click and enroll, Zero to Hero may earn a commission at no extra cost to you.
+    </p>
+  </footer>
+
+  <script>
+    function goToCourse(url) {
+      // Future: add your affiliate tracking here
+      window.open(url, "_blank");
+    }
+  </script>
+<script src="./script.js"></script>
+</body>
+</html>

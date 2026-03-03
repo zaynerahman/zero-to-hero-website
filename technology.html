@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technology Courses | Zero to Hero</title>
+  <link rel="stylesheet" href="./style.css?v=1" />
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="topbar-left">
+    <img class="logo-img" src="images/Logo.png" alt="Zero to Hero logo" />
+  </div>
+
+  <div class="topbar-center">
+    <div class="brand-badge">
+      <h1 class="site-title">Zero to Hero</h1>
+      <p class="tagline">
+        Online learning to master that lucrative career skill, ace that study exam, or become the expert in your field
+      </p>
+    </div>
+  </div>
+
+  <nav class="topbar-right">
+    <a href="index.html">Home</a>
+    <a href="index.html#courses">Courses</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h2>Technology Courses</h2>
+    <p>
+      Explore online courses in software development, cloud computing,
+      cybersecurity, AI, and more to future-proof your career.
+    </p>
+  </section>
+
+  <section class="course-list">
+    <h2>Technology Courses by Level</h2>
+
+    <!-- Beginner -->
+    <h3 class="level-title">Beginner</h3>
+    <div class="course-grid">
+      <div class="course-card">
+        <h3>Programming for Everybody (Getting Started with Python)</h3>
+        <p>Perfect for beginners starting their coding journey.</p>
+        <a onclick="goToCourse('https://www.coursera.org/learn/python')" class="course-link">
+          View Course
+        </a>
+      </div>
+
+      <div class="course-card">
+        <h3>Crash Course on Python</h3>
+        <p>Fast-track Python basics with practical exercises.</p>
+        <a onclick="goToCourse('https://www.coursera.org/learn/python-crash-course')" class="course-link">
+          View Course
+        </a>
+      </div>
+
+      <div class="course-card">
+        <h3>Interactive Programming in Python</h3>
+        <p>Build real interactive projects as you learn.</p>
+        <a onclick="goToCourse('https://www.coursera.org/learn/interactive-python-1')" class="course-link">
+          View Course
+        </a>
+      </div>
+    </div>
+
+    <!-- Intermediate -->
+    <h3 class="level-title">Intermediate</h3>
+    <div class="course-grid">
+      <div class="course-card">
+        <h3>Programming in Python</h3>
+        <p>Build stronger problem-solving and Python logic.</p>
+        <a onclick="goToCourse('https://www.coursera.org/learn/programming-in-python')" class="course-link">
+          View Course
+        </a>
+      </div>
+
+      <div class="course-card">
+        <h3>Python for Data Science & AI</h3>
+        <p>Apply Python to real-world scenarios.</p>
+        <a onclick="goToCourse('https://www.coursera.org/learn/python-for-applied-data-science-ai')" class="course-link">
+          View Course
+        </a>
+      </div>
+
+      <div class="course-card">
+        <h3>Python Specialization</h3>
+        <p>A deeper structured Python pathway.</p>
+        <a onclick="goToCourse('https://www.coursera.org/specializations/python')" class="course-link">
+          View Program
+        </a>
+      </div>
+    </div>
+
+    <!-- Advanced -->
+    <h3 class="level-title">Advanced</h3>
+    <div class="course-grid">
+      <div class="course-card">
+        <h3>Advanced Python Development</h3>
+        <p>Industry-level techniques and performance skills.</p>
+        <a onclick="goToCourse('https://www.coursera.org/learn/microsoft-advanced-python-development-techniques')" class="course-link">
+          View Course
+        </a>
+      </div>
+
+      <div class="course-card">
+        <h3>Advanced Programming Techniques</h3>
+        <p>Advanced patterns and best practices.</p>
+        <a onclick="goToCourse('https://www.coursera.org/specializations/advanced-programming-techniques-python')" class="course-link">
+          View Program
+        </a>
+      </div>
+
+      <div class="course-card">
+        <h3>Microsoft Python Developer Certificate</h3>
+        <p>Career-ready professional certificate.</p>
+        <a onclick="goToCourse('https://www.coursera.org/professional-certificates/microsoft-python-developer')" class="course-link">
+          View Certificate
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>© Zero to Hero — Helping learners build future-ready skills.</p>
+  <p>
+    Disclaimer: Some links on this site may be affiliate links.
+  </p>
+</footer>
+
+<!-- Affiliate-ready script -->
+<script>
+  function goToCourse(url) {
+    window.open(url, "_blank");
+  }
+</script>
+<script src="./script.js"></script>
+</body>
+</html>
