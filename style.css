@@ -66,6 +66,10 @@ body {
   margin-bottom: -112px;
 }
 
+.suit-logo {
+  height: 200px;
+}
+
 /* Badge */
 .brand-badge {
   padding: 0;
