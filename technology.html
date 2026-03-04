@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Technology Courses | Zero to Hero</title>
+  <title>Technology | Zero to Hero</title>
   <link rel="stylesheet" href="./style.css?v=1" />
 </head>
 
@@ -11,16 +11,18 @@
 
 <header class="topbar">
   <div class="topbar-left">
-    <img class="logo-img" src="images/LogoMe.png" alt="Zero to Hero logo" />
+    <img class="logo-img" src="images/NewLogoMe.png" alt="Zero to Hero logo" />
   </div>
 
   <div class="topbar-center">
     <div class="brand-badge">
-      <h1 class="site-title">Zero to Hero</h1>
-      <p class="tagline">
-        Online learning to master that lucrative career skill, ace that study exam, or become the expert in your field
-      </p>
+      <!-- CHANGE THIS filename if needed -->
+      <img class="brand-badge-img" src="images/TechnologyBadge.png" alt="Technology badge">
     </div>
+
+    <p class="main-tagline">
+      Online learning to master that lucrative career skill, ace that study exam, or become the expert in your field
+    </p>
   </div>
 
   <nav class="topbar-right">
@@ -33,97 +35,74 @@
 
 <main>
   <section class="hero">
-    <h2>Technology Courses</h2>
-    <p>
-      Explore online courses in software development, cloud computing,
-      cybersecurity, AI, and more to future-proof your career.
-    </p>
+    <h2>Technology</h2>
+    <p>Build modern tech skills in programming, IT, cloud, cybersecurity, and software development.</p>
+    <a href="index.html#courses" class="cta-button">Back to Categories</a>
   </section>
 
   <section class="course-list">
     <h2>Technology Courses by Level</h2>
 
-    <!-- Beginner -->
     <h3 class="level-title">Beginner</h3>
     <div class="course-grid">
       <div class="course-card">
-        <h3>Programming for Everybody (Getting Started with Python)</h3>
-        <p>Perfect for beginners starting their coding journey.</p>
-        <a onclick="goToCourse('https://www.coursera.org/learn/python')" class="course-link">
-          View Course
-        </a>
+        <h3>Programming for Everybody (Python)</h3>
+        <p>Start coding from scratch with Python fundamentals.</p>
+        <a onclick="goToCourse('https://www.coursera.org/learn/python')" class="course-link">View Course</a>
       </div>
 
       <div class="course-card">
         <h3>Crash Course on Python</h3>
-        <p>Fast-track Python basics with practical exercises.</p>
-        <a onclick="goToCourse('https://www.coursera.org/learn/python-crash-course')" class="course-link">
-          View Course
-        </a>
+        <p>Learn core Python quickly with hands-on exercises.</p>
+        <a onclick="goToCourse('https://www.coursera.org/learn/python-crash-course')" class="course-link">View Course</a>
       </div>
 
       <div class="course-card">
-        <h3>Interactive Programming in Python</h3>
-        <p>Build real interactive projects as you learn.</p>
-        <a onclick="goToCourse('https://www.coursera.org/learn/interactive-python-1')" class="course-link">
-          View Course
-        </a>
+        <h3>Introduction to Cloud Computing</h3>
+        <p>Understand cloud basics and how modern systems are hosted.</p>
+        <a onclick="goToCourse('https://www.coursera.org/learn/introduction-to-cloud')" class="course-link">View Course</a>
       </div>
     </div>
 
-    <!-- Intermediate -->
     <h3 class="level-title">Intermediate</h3>
     <div class="course-grid">
       <div class="course-card">
-        <h3>Programming in Python</h3>
-        <p>Build stronger problem-solving and Python logic.</p>
-        <a onclick="goToCourse('https://www.coursera.org/learn/programming-in-python')" class="course-link">
-          View Course
-        </a>
+        <h3>Python for Data Science, AI & Development</h3>
+        <p>Use Python in practical development and applied projects.</p>
+        <a onclick="goToCourse('https://www.coursera.org/learn/python-for-applied-data-science-ai')" class="course-link">View Course</a>
       </div>
 
       <div class="course-card">
-        <h3>Python for Data Science & AI</h3>
-        <p>Apply Python to real-world scenarios.</p>
-        <a onclick="goToCourse('https://www.coursera.org/learn/python-for-applied-data-science-ai')" class="course-link">
-          View Course
-        </a>
+        <h3>Google IT Support</h3>
+        <p>Build job-ready IT support skills with a structured program.</p>
+        <a onclick="goToCourse('https://www.coursera.org/professional-certificates/google-it-support')" class="course-link">View Program</a>
       </div>
 
       <div class="course-card">
-        <h3>Python Specialization</h3>
-        <p>A deeper structured Python pathway.</p>
-        <a onclick="goToCourse('https://www.coursera.org/specializations/python')" class="course-link">
-          View Program
-        </a>
+        <h3>Introduction to Cyber Security</h3>
+        <p>Learn core concepts behind security and protection online.</p>
+        <a onclick="goToCourse('https://www.coursera.org/learn/intro-cyber-security')" class="course-link">View Course</a>
       </div>
     </div>
 
-    <!-- Advanced -->
     <h3 class="level-title">Advanced</h3>
     <div class="course-grid">
       <div class="course-card">
-        <h3>Advanced Python Development</h3>
-        <p>Industry-level techniques and performance skills.</p>
-        <a onclick="goToCourse('https://www.coursera.org/learn/microsoft-advanced-python-development-techniques')" class="course-link">
-          View Course
-        </a>
+        <h3>AWS Cloud Solutions Architect</h3>
+        <p>Advance into cloud architecture and infrastructure skills.</p>
+        <a onclick="goToCourse('https://www.coursera.org/professional-certificates/aws-cloud-solutions-architect')" class="course-link">View Program</a>
       </div>
 
       <div class="course-card">
-        <h3>Advanced Programming Techniques</h3>
-        <p>Advanced patterns and best practices.</p>
-        <a onclick="goToCourse('https://www.coursera.org/specializations/advanced-programming-techniques-python')" class="course-link">
-          View Program
-        </a>
+        <h3>IBM DevOps and Software Engineering</h3>
+        <p>Learn CI/CD, DevOps practices, and engineering workflows.</p>
+        <a onclick="goToCourse('https://www.coursera.org/professional-certificates/ibm-devops-and-software-engineering')" class="course-link">View Program</a>
       </div>
 
       <div class="course-card">
-        <h3>Microsoft Python Developer Certificate</h3>
-        <p>Career-ready professional certificate.</p>
-        <a onclick="goToCourse('https://www.coursera.org/professional-certificates/microsoft-python-developer')" class="course-link">
-          View Certificate
-        </a>
+        <h3>Advanced Python Development Techniques</h3>
+        <p>Level up Python skills with advanced real-world techniques.</p>
+        <a onclick="goToCourse('https://www.coursera.org/learn/microsoft-advanced-python-development-techniques')" class="course-link">View Course</a>
       </div>
     </div>
   </section>
@@ -131,17 +110,9 @@
 
 <footer class="footer">
   <p>© Zero to Hero — Helping learners build future-ready skills.</p>
-  <p>
-    Disclaimer: Some links on this site may be affiliate links.
-  </p>
+  <p>Disclaimer: Some links on this site may be affiliate links. If you click and enroll, Zero to Hero may earn a commission at no extra cost to you.</p>
 </footer>
 
-<!-- Affiliate-ready script -->
-<script>
-  function goToCourse(url) {
-    window.open(url, "_blank");
-  }
-</script>
 <script src="./script.js"></script>
 </body>
 </html>
