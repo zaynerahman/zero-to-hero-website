@@ -316,3 +316,16 @@ main {
   font-size: 12px;
   opacity: 0.8;
 }
+.footer-links {
+  margin: 8px 0;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 6px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
