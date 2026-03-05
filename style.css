@@ -200,6 +200,17 @@ main {
   border-color: black;
 }
 
+.quick-guides {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.quick-guides a {
+  color: black;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 /* ===== COURSE LIST ===== */
 .course-list {
   text-align: center;
