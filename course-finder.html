@@ -15,6 +15,7 @@
 
 <header class="topbar">
   <div class="topbar-left">
+    <!-- If you're using ChangeMe.png and had caching issues, keep the ?v=2 -->
     <img class="logo-img" src="images/ChangeMe.png?v=2" alt="Zero to Hero logo" />
   </div>
 
@@ -24,7 +25,7 @@
     </div>
 
     <p class="main-tagline">
-      Your pathway to mastery starts online — earn the skills that pay, excel in your exams, and lead in your profession
+      Online learning to master that lucrative career skill, ace that study exam, or become the expert in your field
     </p>
   </div>
 
@@ -78,6 +79,20 @@
 
       <br><br>
 
+      <label><strong>What outcome are you aiming for?</strong></label><br><br>
+      <select id="outcome" style="padding:10px; width:100%; max-width:520px;">
+        <option value="unsure">Not sure yet (help me choose)</option>
+        <option value="data-analyst">Data Analyst</option>
+        <option value="software-dev">Software Developer</option>
+        <option value="it-support">IT Support</option>
+        <option value="cybersecurity">Cybersecurity</option>
+        <option value="digital-marketer">Digital Marketer</option>
+        <option value="business-analyst">Business Analyst</option>
+        <option value="finance">Finance / Investment basics</option>
+      </select>
+
+      <br><br>
+
       <button class="cta-button" type="button" onclick="recommend()">Get my recommendation</button>
 
       <div id="result" style="margin-top:18px; font-size:16px;"></div>
@@ -103,16 +118,27 @@
     const goal = document.getElementById("goal").value;
     const interest = document.getElementById("interest").value;
     const level = document.getElementById("level").value;
+    const outcome = document.getElementById("outcome").value;
 
-    // Simple first version (we’ll improve the logic next step)
-    const map = {
+    const outcomeMap = {
+      "data-analyst": { page: "data.html", label: "Data & Analytics" },
+      "software-dev": { page: "technology.html", label: "Technology" },
+      "it-support": { page: "technology.html", label: "Technology" },
+      "cybersecurity": { page: "technology.html", label: "Technology" },
+      "digital-marketer": { page: "digital-marketing.html", label: "Digital Marketing" },
+      "business-analyst": { page: "business-finance.html", label: "Business & Finance" },
+      "finance": { page: "business-finance.html", label: "Business & Finance" },
+    };
+
+    const interestMap = {
       tech: { page: "technology.html", label: "Technology" },
       data: { page: "data.html", label: "Data & Analytics" },
       biz: { page: "business-finance.html", label: "Business & Finance" },
       marketing: { page: "digital-marketing.html", label: "Digital Marketing" }
     };
 
-    const pick = map[interest];
+    const pick = outcome !== "unsure" ? outcomeMap[outcome] : interestMap[interest];
+
     const goalText =
       goal === "career" ? "career growth" :
       goal === "study" ? "study support" :
@@ -123,8 +149,12 @@
       level === "intermediate" ? "Intermediate-level" :
       "Advanced";
 
+    const outcomeText =
+      outcome === "unsure" ? "based on your interests" :
+      "based on your target role";
+
     document.getElementById("result").innerHTML = `
-      <p><strong>Recommendation:</strong> Start with <strong>${pick.label}</strong>.</p>
+      <p><strong>Recommendation:</strong> Start with <strong>${pick.label}</strong> (${outcomeText}).</p>
       <p>${levelText} options are best for your goal (${goalText}).</p>
       <p><a class="course-link" href="${pick.page}">Go to ${pick.label} courses →</a></p>
     `;
