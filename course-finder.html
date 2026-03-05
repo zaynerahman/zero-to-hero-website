@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course Finder | Zero to Hero</title>
+
+  <meta name="description" content="Use the Zero to Hero Course Finder to discover the best learning path based on your goals, level, and interests." />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="stylesheet" href="./style.css?v=1" />
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="topbar-left">
+    <img class="logo-img" src="images/NewLogoMe.png" alt="Zero to Hero logo" />
+  </div>
+
+  <div class="topbar-center">
+    <div class="brand-badge">
+      <img class="brand-badge-img" src="images/Mainbadgeglow.png" alt="Zero to Hero badge">
+    </div>
+
+    <p class="main-tagline">
+      Online learning to master that lucrative career skill, ace that study exam, or become the expert in your field
+    </p>
+  </div>
+
+  <nav class="topbar-right">
+    <a href="index.html">Home</a>
+    <a href="index.html#courses">Courses</a>
+    <a href="course-finder.html">Course Finder</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h2>Course Finder</h2>
+    <p>
+      Answer a few quick questions and we’ll suggest the best learning category to start with.
+      (No email required — your answers stay on your device.)
+    </p>
+  </section>
+
+  <section class="course-list" style="max-width: 900px; margin: 0 auto;">
+    <h2>Find your best starting point</h2>
+
+    <div class="course-card" style="text-align:left;">
+      <label><strong>What’s your main goal?</strong></label><br><br>
+      <select id="goal" style="padding:10px; width:100%; max-width:520px;">
+        <option value="career">Career growth / job change</option>
+        <option value="study">Study / exams / university support</option>
+        <option value="skills">Add a new skill / personal development</option>
+      </select>
+
+      <br><br>
+
+      <label><strong>Which area are you most interested in?</strong></label><br><br>
+      <select id="interest" style="padding:10px; width:100%; max-width:520px;">
+        <option value="tech">Technology (coding, IT, cloud, cybersecurity)</option>
+        <option value="data">Data & Analytics (Excel, SQL, dashboards, analysis)</option>
+        <option value="biz">Business & Finance (strategy, finance basics, business skills)</option>
+        <option value="marketing">Digital Marketing (SEO, social, ads, e-commerce)</option>
+      </select>
+
+      <br><br>
+
+      <label><strong>What level are you starting from?</strong></label><br><br>
+      <select id="level" style="padding:10px; width:100%; max-width:520px;">
+        <option value="beginner">Beginner</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="advanced">Advanced</option>
+      </select>
+
+      <br><br>
+
+      <button class="cta-button" type="button" onclick="recommend()">Get my recommendation</button>
+
+      <div id="result" style="margin-top:18px; font-size:16px;"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>© Zero to Hero — Helping learners build future-ready skills.</p>
+
+  <p class="footer-links">
+    <a href="privacy.html">Privacy Policy</a> ·
+    <a href="disclosure.html">Affiliate Disclosure</a>
+  </p>
+
+  <p>
+    Disclaimer: Some links on this site may be affiliate links. If you click and enroll, Zero to Hero may earn a commission at no extra cost to you.
+  </p>
+</footer>
+
+<script>
+  function recommend() {
+    const goal = document.getElementById("goal").value;
+    const interest = document.getElementById("interest").value;
+    const level = document.getElementById("level").value;
+
+    // Simple first version (we’ll improve the logic next step)
+    const map = {
+      tech: { page: "technology.html", label: "Technology" },
+      data: { page: "data.html", label: "Data & Analytics" },
+      biz: { page: "business-finance.html", label: "Business & Finance" },
+      marketing: { page: "digital-marketing.html", label: "Digital Marketing" }
+    };
+
+    const pick = map[interest];
+    const goalText =
+      goal === "career" ? "career growth" :
+      goal === "study" ? "study support" :
+      "skill-building";
+
+    const levelText =
+      level === "beginner" ? "Beginner-friendly" :
+      level === "intermediate" ? "Intermediate-level" :
+      "Advanced";
+
+    document.getElementById("result").innerHTML = `
+      <p><strong>Recommendation:</strong> Start with <strong>${pick.label}</strong>.</p>
+      <p>${levelText} options are best for your goal (${goalText}).</p>
+      <p><a class="course-link" href="${pick.page}">Go to ${pick.label} courses →</a></p>
+    `;
+  }
+</script>
+
+</body>
+</html>
