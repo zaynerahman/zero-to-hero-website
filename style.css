@@ -16,19 +16,25 @@ color:#111;
 
 .topbar{
 display:flex;
-align-items:center;
+align-items:flex-start;
 justify-content:space-between;
 background:black;
-padding:0 30px;
+padding:8px 30px 0 30px;
+min-height: 170px;
+position: relative;
+overflow:visible;
 }
 
 .topbar-left img{
-height:250px;
+  height: 280px;
+  display:block;
+  margin-top:0;
+  margin-bottom: -39px;
 }
 
 .topbar-center{
-text-align:center;
-color:white;
+  text-align:center;
+  color:white;
 }
 
 .brand-badge-img{
