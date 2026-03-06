@@ -243,3 +243,27 @@ margin:0 8px;
 .footer-links a:hover{
 text-decoration:underline;
 }
+/* Popular Guides Buttons */
+
+.guides-grid{
+display:flex;
+flex-wrap:wrap;
+gap:16px;
+margin-top:20px;
+}
+
+.guide-btn{
+display:inline-block;
+padding:14px 22px;
+background:black;
+color:white;
+border-radius:12px;
+text-decoration:none;
+font-weight:600;
+transition:0.2s ease;
+}
+
+.guide-btn:hover{
+background:#222;
+transform:translateY(-2px);
+}
