@@ -246,14 +246,18 @@ text-decoration:underline;
 /* Popular Guides Buttons */
 
 .guides-grid{
-display:flex;
-flex-wrap:wrap;
-gap:16px;
-margin-top:20px;
+display:grid;
+grid-template-columns: repeat(2, 1fr);
+gap:20px;
+max-width:600px;
+margin:30px auto;
+justify-items:center;
 }
 
 .guide-btn{
-display:inline-block;
+display:block;
+width:260px;
+text-align:center;
 padding:14px 22px;
 background:black;
 color:white;
