@@ -277,3 +277,42 @@ text-decoration:underline;
   background:#222;
   transform:translateY(-2px);
 }
+/* Guides layout */
+
+.guides-grid{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  gap:30px;
+  max-width:900px;
+  margin:40px auto;
+}
+
+.guide-card{
+  background:rgba(255,255,255,0.85);
+  padding:28px;
+  border-radius:16px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.08);
+  text-align:center;
+}
+
+.guide-card h3{
+  margin-top:0;
+}
+
+.guide-card p{
+  margin-bottom:20px;
+}
+
+.guide-btn{
+  display:inline-block;
+  padding:12px 20px;
+  background:black;
+  color:white;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.guide-btn:hover{
+  background:#222;
+}
