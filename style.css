@@ -19,7 +19,7 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 background:black;
-padding:10px 30px;
+padding:0 30px;
 }
 
 .topbar-left img{
@@ -246,28 +246,28 @@ text-decoration:underline;
 /* Popular Guides Buttons */
 
 .guides-grid{
-display:grid;
-grid-template-columns: repeat(2, 1fr);
-gap:20px;
-max-width:600px;
-margin:30px auto;
-justify-items:center;
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:20px;
+  max-width:600px;
+  margin:30px auto;
+  justify-items:center;
 }
 
 .guide-btn{
-display:block;
-width:260px;
-text-align:center;
-padding:14px 22px;
-background:black;
-color:white;
-border-radius:12px;
-text-decoration:none;
-font-weight:600;
-transition:0.2s ease;
+  display:block;
+  width:260px;
+  text-align:center;
+  padding:14px 22px;
+  background:black;
+  color:white;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.2s ease;
 }
 
 .guide-btn:hover{
-background:#222;
-transform:translateY(-2px);
+  background:#222;
+  transform:translateY(-2px);
 }
