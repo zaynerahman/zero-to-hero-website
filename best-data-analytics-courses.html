@@ -9,7 +9,7 @@
 <link rel="icon" type="image/png" href="images/favicon.png">
 <meta name="description" content="Discover the best data analytics courses online to build skills in Excel, SQL, Python, and data visualisation. Compare top beginner and advanced courses.">
 
-<link rel="stylesheet" href="./style.css?v=1">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -53,7 +53,7 @@ Online learning to master that lucrative career skill, ace that study exam, or b
 <h2>Best Data Analytics Courses</h2>
 
 <p>
-Data analytics is one of the fastest growing career paths. The right course can help you develop skills in data analysis, visualisation, and business insights using tools like Excel, SQL, and Python.
+Data analytics is one of the fastest-growing career paths. The right course can help you develop skills in data analysis, visualisation, and business insights using tools like Excel, SQL, and Python.
 </p>
 
 </section>
@@ -61,6 +61,8 @@ Data analytics is one of the fastest growing career paths. The right course can 
 <section class="course-list">
 
 <h2>Top Courses for Beginners</h2>
+
+<div class="course-grid">
 
 <div class="course-card">
 
@@ -70,9 +72,9 @@ Data analytics is one of the fastest growing career paths. The right course can 
 A popular beginner-friendly program that teaches core data analytics skills including spreadsheets, SQL, data visualisation, and data-driven decision making.
 </p>
 
-<button onclick="goToCourse('#')">
-View Course
-</button>
+<a class="course-link-btn" href="https://www.coursera.org/professional-certificates/google-data-analytics" target="_blank" rel="noopener">
+View Program
+</a>
 
 </div>
 
@@ -84,9 +86,11 @@ View Course
 Learn data analysis using Excel, Python, SQL and modern analytics tools while building hands-on projects for real-world experience.
 </p>
 
-<button onclick="goToCourse('#')">
-View Course
-</button>
+<a class="course-link-btn" href="https://www.coursera.org/professional-certificates/ibm-data-analyst" target="_blank" rel="noopener">
+View Program
+</a>
+
+</div>
 
 </div>
 
@@ -96,17 +100,35 @@ View Course
 
 <h2>Intermediate Courses</h2>
 
+<div class="course-grid">
+
 <div class="course-card">
 
-<h3>Data Analytics with Python</h3>
+<h3>Data Analysis with Python</h3>
 
 <p>
-Build stronger analytical skills using Python, pandas, and real datasets to uncover patterns and insights.
+Build stronger analytical skills using Python, pandas, data cleaning, exploratory analysis, visualisation, and predictive modelling techniques.
 </p>
 
-<button onclick="goToCourse('#')">
+<a class="course-link-btn" href="https://www.coursera.org/learn/data-analysis-with-python" target="_blank" rel="noopener">
 View Course
-</button>
+</a>
+
+</div>
+
+<div class="course-card">
+
+<h3>Google Data Analysis with Python Specialization</h3>
+
+<p>
+Develop Python fundamentals and apply exploratory data analysis techniques using professional workflows and real-world datasets.
+</p>
+
+<a class="course-link-btn" href="https://www.coursera.org/specializations/google-data-analysis-with-python" target="_blank" rel="noopener">
+View Program
+</a>
+
+</div>
 
 </div>
 
@@ -116,17 +138,35 @@ View Course
 
 <h2>Advanced Data Analytics</h2>
 
+<div class="course-grid">
+
 <div class="course-card">
 
-<h3>Advanced Data Analytics Specialization</h3>
+<h3>Google Advanced Data Analytics Professional Certificate</h3>
 
 <p>
-Develop advanced analytics and machine learning techniques to handle complex datasets and predictive models.
+Develop advanced analytics, statistical analysis, regression modelling, Python skills, and machine learning foundations for higher-level analytics roles.
 </p>
 
-<button onclick="goToCourse('#')">
-View Course
-</button>
+<a class="course-link-btn" href="https://www.coursera.org/professional-certificates/google-advanced-data-analytics" target="_blank" rel="noopener">
+View Program
+</a>
+
+</div>
+
+<div class="course-card">
+
+<h3>Advanced Business Analytics Specialization</h3>
+
+<p>
+Learn advanced descriptive, predictive, and prescriptive analytics techniques for business-focused data analysis and decision-making.
+</p>
+
+<a class="course-link-btn" href="https://www.coursera.org/specializations/data-analytics-business" target="_blank" rel="noopener">
+View Program
+</a>
+
+</div>
 
 </div>
 
@@ -149,15 +189,7 @@ Disclaimer: Some links on this site may be affiliate links. If you click and enr
 
 </footer>
 
-<script>
-
-function goToCourse(url) {
-
-window.open(url, "_blank");
-
-}
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
