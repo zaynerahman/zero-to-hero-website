@@ -4,20 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Course Finder | Zero to Hero</title>
-  <link rel="icon" type="image/png" href="images/favicon.png">
 
   <meta name="description" content="Use the Zero to Hero Course Finder to discover the best learning path based on your goals, level, and interests." />
   <meta name="robots" content="index, follow" />
 
-  <link rel="stylesheet" href="./style.css?v=1" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="stylesheet" href="./style.css?v=4" />
 </head>
 
 <body>
 
 <header class="topbar">
   <div class="topbar-left">
-    <!-- If you're using ChangeMe.png and had caching issues, keep the ?v=2 -->
-    <img class="logo-img" src="images/ChangeMe.png?v=2" alt="Zero to Hero logo" />
+    <img class="logo-img" src="images/CourseFind.png" alt="Zero to Hero logo" />
   </div>
 
   <div class="topbar-center">
@@ -45,14 +44,14 @@
     <h2>Course Finder</h2>
     <p>
       Answer a few quick questions and we’ll suggest the best learning category to start with.
-      (No email required — your answers stay on your device.)
+      No email required — your answers stay on your device.
     </p>
   </section>
 
   <section class="course-list" style="max-width: 900px; margin: 0 auto;">
     <h2>Find your best starting point</h2>
 
-    <div class="course-card" style="text-align:center;">
+    <div class="course-card" style="text-align:left;">
       <label><strong>What’s your main goal?</strong></label><br><br>
       <select id="goal" style="padding:10px; width:100%; max-width:520px;">
         <option value="career">Career growth / job change</option>
@@ -64,10 +63,14 @@
 
       <label><strong>Which area are you most interested in?</strong></label><br><br>
       <select id="interest" style="padding:10px; width:100%; max-width:520px;">
-        <option value="tech">Technology (coding, IT, cloud, cybersecurity)</option>
-        <option value="data">Data & Analytics (Excel, SQL, dashboards, analysis)</option>
-        <option value="biz">Business & Finance (strategy, finance basics, business skills)</option>
-        <option value="marketing">Digital Marketing (SEO, social, ads, e-commerce)</option>
+        <option value="programming">Python & Programming</option>
+        <option value="data">Data Analytics</option>
+        <option value="cyber">Cybersecurity</option>
+        <option value="cloud">Cloud Computing & IT Support</option>
+        <option value="ai">AI & Machine Learning</option>
+        <option value="marketing">Digital Marketing</option>
+        <option value="business">Business & Management</option>
+        <option value="finance">Finance & Investing</option>
       </select>
 
       <br><br>
@@ -84,13 +87,16 @@
       <label><strong>What outcome are you aiming for?</strong></label><br><br>
       <select id="outcome" style="padding:10px; width:100%; max-width:520px;">
         <option value="unsure">Not sure yet (help me choose)</option>
-        <option value="data-analyst">Data Analyst</option>
         <option value="software-dev">Software Developer</option>
-        <option value="it-support">IT Support</option>
+        <option value="python-dev">Python Developer</option>
+        <option value="data-analyst">Data Analyst</option>
+        <option value="data-scientist">Data Scientist</option>
         <option value="cybersecurity">Cybersecurity</option>
+        <option value="cloud-engineer">Cloud Engineer / IT Support</option>
+        <option value="ai-engineer">AI / Machine Learning</option>
         <option value="digital-marketer">Digital Marketer</option>
-        <option value="business-analyst">Business Analyst</option>
-        <option value="finance">Finance / Investment basics</option>
+        <option value="business-analyst">Business Analyst / Manager</option>
+        <option value="finance">Finance / Investing</option>
       </select>
 
       <br><br>
@@ -123,20 +129,27 @@
     const outcome = document.getElementById("outcome").value;
 
     const outcomeMap = {
-      "data-analyst": { page: "data.html", label: "Data & Analytics" },
-      "software-dev": { page: "technology.html", label: "Technology" },
-      "it-support": { page: "technology.html", label: "Technology" },
-      "cybersecurity": { page: "technology.html", label: "Technology" },
+      "software-dev": { page: "python-programming.html", label: "Python & Programming" },
+      "python-dev": { page: "python-programming.html", label: "Python & Programming" },
+      "data-analyst": { page: "data-analytics.html", label: "Data Analytics" },
+      "data-scientist": { page: "ai-machine-learning.html", label: "AI & Machine Learning" },
+      "cybersecurity": { page: "cybersecurity.html", label: "Cybersecurity" },
+      "cloud-engineer": { page: "cloud-it-support.html", label: "Cloud Computing & IT Support" },
+      "ai-engineer": { page: "ai-machine-learning.html", label: "AI & Machine Learning" },
       "digital-marketer": { page: "digital-marketing.html", label: "Digital Marketing" },
-      "business-analyst": { page: "business-finance.html", label: "Business & Finance" },
-      "finance": { page: "business-finance.html", label: "Business & Finance" },
+      "business-analyst": { page: "business-management.html", label: "Business & Management" },
+      "finance": { page: "finance-investing.html", label: "Finance & Investing" }
     };
 
     const interestMap = {
-      tech: { page: "technology.html", label: "Technology" },
-      data: { page: "data.html", label: "Data & Analytics" },
-      biz: { page: "business-finance.html", label: "Business & Finance" },
-      marketing: { page: "digital-marketing.html", label: "Digital Marketing" }
+      programming: { page: "python-programming.html", label: "Python & Programming" },
+      data: { page: "data-analytics.html", label: "Data Analytics" },
+      cyber: { page: "cybersecurity.html", label: "Cybersecurity" },
+      cloud: { page: "cloud-it-support.html", label: "Cloud Computing & IT Support" },
+      ai: { page: "ai-machine-learning.html", label: "AI & Machine Learning" },
+      marketing: { page: "digital-marketing.html", label: "Digital Marketing" },
+      business: { page: "business-management.html", label: "Business & Management" },
+      finance: { page: "finance-investing.html", label: "Finance & Investing" }
     };
 
     const pick = outcome !== "unsure" ? outcomeMap[outcome] : interestMap[interest];
@@ -158,7 +171,7 @@
     document.getElementById("result").innerHTML = `
       <p><strong>Recommendation:</strong> Start with <strong>${pick.label}</strong> (${outcomeText}).</p>
       <p>${levelText} options are best for your goal (${goalText}).</p>
-      <p><a class="course-link" href="${pick.page}">Go to ${pick.label} courses →</a></p>
+      <p><a class="course-link-btn" href="${pick.page}">Go to ${pick.label} courses →</a></p>
     `;
   }
 </script>
