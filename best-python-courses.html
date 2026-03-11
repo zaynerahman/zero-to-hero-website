@@ -87,8 +87,10 @@ Python is one of the most valuable programming skills for careers in software de
 A beginner friendly introduction to Python from the University of Michigan that teaches programming basics with real examples.
 </p>
 
-<a class="course-link-btn" href="https://www.coursera.org/learn/python" target="_blank"
-onclick="trackCourseClick('Programming for Everybody','Coursera')">
+<a class="course-link-btn"
+href="https://www.coursera.org/learn/python"
+target="_blank"
+onclick="return trackCourseClick('Programming for Everybody','Coursera','https://www.coursera.org/learn/python')">
 Coursera
 </a>
 
@@ -266,12 +268,25 @@ Disclaimer: Some links on this site may be affiliate links. If you click and enr
 </body>
 </html>
 <script>
-function trackCourseClick(courseName, provider) {
+function trackCourseClick(courseName, provider, url){
+
   if (typeof gtag === "function") {
     gtag('event', 'course_click', {
       course_name: courseName,
-      provider: provider
+      provider: provider,
+      event_callback: function () {
+        window.open(url, "_blank");
+      }
     });
+
+    setTimeout(function () {
+      window.open(url, "_blank");
+    }, 800);
+
+    return false;
   }
+
+  window.open(url, "_blank");
+  return false;
 }
 </script>
