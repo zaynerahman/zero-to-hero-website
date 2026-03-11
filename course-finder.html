@@ -9,7 +9,99 @@
   <meta name="robots" content="index, follow" />
 
   <link rel="icon" type="image/png" href="images/favicon.png" />
-  <link rel="stylesheet" href="./style.css?v=4" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .finder-note {
+      font-size: 13px;
+      color: #555;
+      margin-top: 12px;
+      line-height: 1.5;
+    }
+
+    .comparison-wrap {
+      margin-top: 24px;
+      overflow-x: auto;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: rgba(255,255,255,0.88);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 14px 12px;
+      border: 1px solid #e7e7e7;
+      text-align: left;
+      vertical-align: top;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .comparison-table th {
+      background: #111;
+      color: white;
+      font-weight: 600;
+    }
+
+    .comparison-table td strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .table-btn {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 8px 12px;
+      background: black;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .table-btn:hover {
+      opacity: 0.92;
+    }
+
+    .finder-highlights {
+      margin-top: 18px;
+      padding: 16px 18px;
+      background: rgba(255,255,255,0.75);
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.5);
+    }
+
+    .finder-highlights p {
+      margin: 8px 0;
+      line-height: 1.5;
+    }
+
+    .finder-form {
+      max-width: 620px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .finder-form label {
+      display: block;
+      text-align: center;
+    }
+
+    .finder-form select {
+      display: block;
+      margin: 0 auto;
+      padding: 10px;
+      width: 100%;
+      max-width: 520px;
+    }
+  </style>
 </head>
 
 <body>
@@ -43,67 +135,52 @@
   <section class="hero">
     <h2>Course Finder</h2>
     <p>
-      Answer a few quick questions and we’ll suggest the best learning category to start with.
+      Answer a few quick questions and we’ll suggest the best learning path to start with.
       No email required — your answers stay on your device.
     </p>
   </section>
 
-  <section class="course-list" style="max-width: 900px; margin: 0 auto;">
+  <section class="course-list" style="max-width: 1100px; margin: 0 auto;">
     <h2>Find your best starting point</h2>
 
-    <div class="course-card" style="text-align:left;">
-      <label><strong>What’s your main goal?</strong></label><br><br>
-      <select id="goal" style="padding:10px; width:100%; max-width:520px;">
-        <option value="career">Career growth / job change</option>
-        <option value="study">Study / exams / university support</option>
-        <option value="skills">Add a new skill / personal development</option>
-      </select>
+    <div class="course-card">
+      <div class="finder-form">
+        <label><strong>What’s your main goal?</strong></label><br>
+        <select id="goal">
+          <option value="career">Career growth / job change</option>
+          <option value="study">Study / exams / university support</option>
+          <option value="skills">Add a new skill / personal development</option>
+        </select>
 
-      <br><br>
+        <br>
 
-      <label><strong>Which area are you most interested in?</strong></label><br><br>
-      <select id="interest" style="padding:10px; width:100%; max-width:520px;">
-        <option value="programming">Python & Programming</option>
-        <option value="data">Data Analytics</option>
-        <option value="cyber">Cybersecurity</option>
-        <option value="cloud">Cloud Computing & IT Support</option>
-        <option value="ai">AI & Machine Learning</option>
-        <option value="marketing">Digital Marketing</option>
-        <option value="business">Business & Management</option>
-        <option value="finance">Finance & Investing</option>
-      </select>
+        <label><strong>Which area are you most interested in?</strong></label><br>
+        <select id="interest">
+          <option value="programming">Python & Programming</option>
+          <option value="data">Data Analytics</option>
+          <option value="cyber">Cybersecurity</option>
+          <option value="cloud">Cloud Computing & IT Support</option>
+          <option value="ai">AI & Machine Learning</option>
+          <option value="marketing">Digital Marketing</option>
+          <option value="business">Business & Management</option>
+          <option value="finance">Finance & Investing</option>
+        </select>
 
-      <br><br>
+        <br>
 
-      <label><strong>What level are you starting from?</strong></label><br><br>
-      <select id="level" style="padding:10px; width:100%; max-width:520px;">
-        <option value="beginner">Beginner</option>
-        <option value="intermediate">Intermediate</option>
-        <option value="advanced">Advanced</option>
-      </select>
+        <label><strong>What level are you starting from?</strong></label><br>
+        <select id="level">
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced</option>
+        </select>
 
-      <br><br>
+        <br>
 
-      <label><strong>What outcome are you aiming for?</strong></label><br><br>
-      <select id="outcome" style="padding:10px; width:100%; max-width:520px;">
-        <option value="unsure">Not sure yet (help me choose)</option>
-        <option value="software-dev">Software Developer</option>
-        <option value="python-dev">Python Developer</option>
-        <option value="data-analyst">Data Analyst</option>
-        <option value="data-scientist">Data Scientist</option>
-        <option value="cybersecurity">Cybersecurity</option>
-        <option value="cloud-engineer">Cloud Engineer / IT Support</option>
-        <option value="ai-engineer">AI / Machine Learning</option>
-        <option value="digital-marketer">Digital Marketer</option>
-        <option value="business-analyst">Business Analyst / Manager</option>
-        <option value="finance">Finance / Investing</option>
-      </select>
+        <button class="cta-button" type="button" onclick="recommend()">Get my recommendation</button>
+      </div>
 
-      <br><br>
-
-      <button class="cta-button" type="button" onclick="recommend()">Get my recommendation</button>
-
-      <div id="result" style="margin-top:18px; font-size:16px;"></div>
+      <div id="result" style="margin-top:22px; font-size:16px;"></div>
     </div>
   </section>
 </main>
@@ -126,20 +203,6 @@
     const goal = document.getElementById("goal").value;
     const interest = document.getElementById("interest").value;
     const level = document.getElementById("level").value;
-    const outcome = document.getElementById("outcome").value;
-
-    const outcomeMap = {
-      "software-dev": { page: "python-programming.html", label: "Python & Programming" },
-      "python-dev": { page: "python-programming.html", label: "Python & Programming" },
-      "data-analyst": { page: "data-analytics.html", label: "Data Analytics" },
-      "data-scientist": { page: "ai-machine-learning.html", label: "AI & Machine Learning" },
-      "cybersecurity": { page: "cybersecurity.html", label: "Cybersecurity" },
-      "cloud-engineer": { page: "cloud-it-support.html", label: "Cloud Computing & IT Support" },
-      "ai-engineer": { page: "ai-machine-learning.html", label: "AI & Machine Learning" },
-      "digital-marketer": { page: "digital-marketing.html", label: "Digital Marketing" },
-      "business-analyst": { page: "business-management.html", label: "Business & Management" },
-      "finance": { page: "finance-investing.html", label: "Finance & Investing" }
-    };
 
     const interestMap = {
       programming: { page: "python-programming.html", label: "Python & Programming" },
@@ -152,7 +215,7 @@
       finance: { page: "finance-investing.html", label: "Finance & Investing" }
     };
 
-    const pick = outcome !== "unsure" ? outcomeMap[outcome] : interestMap[interest];
+    const pick = interestMap[interest];
 
     const goalText =
       goal === "career" ? "career growth" :
@@ -164,14 +227,521 @@
       level === "intermediate" ? "Intermediate-level" :
       "Advanced";
 
-    const outcomeText =
-      outcome === "unsure" ? "based on your interests" :
-      "based on your target role";
+    let levelAdvice = "";
+    if (level === "beginner") {
+      levelAdvice = "Start with beginner-friendly foundations before moving into specialisations.";
+    } else if (level === "intermediate") {
+      levelAdvice = "Intermediate learners should focus on practical projects and real-world tools.";
+    } else {
+      levelAdvice = "Advanced learners should focus on specialised courses and certifications.";
+    }
+
+    const comparisons = {
+      "Python & Programming": {
+        best1: "Best for structured learning: Coursera",
+        best2: "Best for budget-friendly practical learning: Udemy",
+        best3: "Best for short professional lessons: LinkedIn Learning",
+        rows: `
+          <tr>
+            <td>
+              <strong>Programming for Everybody</strong>
+              Beginner Python fundamentals
+            </td>
+            <td>
+              Coursera
+              <br><br>
+              <a class="table-btn" href="https://www.coursera.org/learn/python" target="_blank" rel="noopener">Visit Course</a>
+            </td>
+            <td>Subscription / free trial</td>
+            <td>Short course</td>
+            <td>Access while subscribed</td>
+            <td>Yes</td>
+            <td>Beginners, structured progression</td>
+            <td>University-style lessons + quizzes</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Complete Python Bootcamp</strong>
+              Practical all-in-one Python course
+            </td>
+            <td>
+              Udemy
+              <br><br>
+              <a class="table-btn" href="https://www.udemy.com/course/complete-python-bootcamp/" target="_blank" rel="noopener">Visit Course</a>
+            </td>
+            <td>One-time purchase</td>
+            <td>Long-form course</td>
+            <td>Lifetime access</td>
+            <td>Yes</td>
+            <td>Skill building, hands-on learning</td>
+            <td>Project-led video lessons</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Python Essential Training</strong>
+              Professional Python fundamentals
+            </td>
+            <td>
+              LinkedIn Learning
+              <br><br>
+              <a class="table-btn" href="https://www.linkedin.com/learning/python-essential-training-18764650" target="_blank" rel="noopener">Visit Course</a>
+            </td>
+            <td>Subscription</td>
+            <td>Short to medium</td>
+            <td>Access while subscribed</td>
+            <td>Yes</td>
+            <td>Professional development</td>
+            <td>Short professional lessons</td>
+          </tr>`
+      },
+
+      "Data Analytics": {
+        best1: "Best for job-ready certificates: Coursera",
+        best2: "Best for practical analytics bootcamps: Udemy",
+        best3: "Best for concise professional upskilling: LinkedIn Learning",
+        rows: `
+          <tr>
+            <td>
+              <strong>Google Data Analytics Professional Certificate</strong>
+              Beginner-friendly analytics certificate
+            </td>
+            <td>
+              Coursera
+              <br><br>
+              <a class="table-btn" href="https://www.coursera.org/professional-certificates/google-data-analytics" target="_blank" rel="noopener">Visit Course</a>
+            </td>
+            <td>Subscription / free trial</td>
+            <td>Multi-course certificate</td>
+            <td>Access while subscribed</td>
+            <td>Yes</td>
+            <td>Beginners, career path, structured learning</td>
+            <td>Certificate pathway + assignments</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Data Analyst Bootcamp</strong>
+              Practical analytics training
+            </td>
+            <td>
+              Udemy
+              <br><br>
+              <a class="table-btn" href="https://www.udemy.com/course/the-data-analyst-course-complete-data-analyst-bootcamp/" target="_blank" rel="noopener">Visit Course</a>
+            </td>
+            <td>One-time purchase</td>
+            <td>Long-form course</td>
+            <td>Lifetime access</td>
+            <td>Yes</td>
+            <td>Skill building, budget learners</td>
+            <td>Hands-on lessons + exercises</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Become a Data Analyst</strong>
+              Professional analytics learning path
+            </td>
+            <td>
+              LinkedIn Learning
+              <br><br>
+              <a class="table-btn" href="https://www.linkedin.com/learning/paths/become-a-data-analyst" target="_blank" rel="noopener">Visit Course</a>
+            </td>
+            <td>Subscription</td>
+            <td>Learning path</td>
+            <td>Access while subscribed</td>
+            <td>Yes</td>
+            <td>Professional upskilling</td>
+            <td>Short structured modules</td>
+          </tr>`
+      },
+
+      "Cybersecurity": {
+        best1: "Best for recognised entry pathways: Coursera",
+        best2: "Best for practical security exposure: Udemy",
+        best3: "Best for workplace-focused learning: LinkedIn Learning",
+        rows: `
+          <tr>
+            <td>
+              <strong>Google Cybersecurity Professional Certificate</strong>
+              Job-ready security pathway
+            </td>
+            <td>
+              Coursera
+              <br><br>
+              <a class="table-btn" href="https://www.coursera.org/professional-certificates/google-cybersecurity" target="_blank" rel="noopener">Visit Course</a>
+            </td>
+            <td>Subscription / free trial</td>
+            <td>Multi-course certificate</td>
+            <td>Access while subscribed</td>
+            <td>Yes</td>
+            <td>Beginners, career starters</td>
+            <td>Structured certificate program</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Complete Cyber Security Course</strong>
+              Practical threat and defense training
+            </td>
+            <td>
+              Udemy
+              <br><br>
+              <a class="table-btn" href="https://www.udemy.com/course/the-complete-internet-security-privacy-course-volume-1/" target="_blank" rel="noopener">Visit Course</a>
+            </td>
+            <td>One-time purchase</td>
+            <td>Long-form course</td>
+            <td>Lifetime access</td>
+            <td>Yes</td>
+            <td>Practical skill building</td>
+            <td>Hands-on security lessons</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Cybersecurity Foundations</strong>
+              Professional security basics
+            </td>
+            <td>
+              LinkedIn Learning
+              <br><br>
+              <a class="table-btn" href="https://www.linkedin.com/learning/cybersecurity-foundations" target="_blank" rel="noopener">Visit Course</a>
+            </td>
+            <td>Subscription</td>
+            <td>Short to medium</td>
+            <td>Access while subscribed</td>
+            <td>Yes</td>
+            <td>Workplace awareness, upskilling</td>
+            <td>Short professional lessons</td>
+          </tr>`
+      },
+
+      "Cloud Computing & IT Support": {
+        best1: "Best for structured support certificates: Coursera",
+        best2: "Best for practical cloud exam prep: Udemy",
+        best3: "Best for professional role preparation: LinkedIn Learning",
+        rows: `
+          <tr>
+            <td>
+              <strong>Google IT Support Professional Certificate</strong>
+              Entry-level IT support pathway
+            </td>
+            <td>
+              Coursera
+              <br><br>
+              <a class="table-btn" href="https://www.coursera.org/professional-certificates/google-it-support" target="_blank" rel="noopener">Visit Course</a>
+            </td>
+            <td>Subscription / free trial</td>
+            <td>Multi-course certificate</td>
+            <td>Access while subscribed</td>
+            <td>Yes</td>
+            <td>IT support careers, structured learning</td>
+            <td>Certificate program + labs</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>AWS Cloud Practitioner</strong>
+              Cloud foundations course
+            </td>
+            <td>
+              Udemy
+              <br><br>
+              <a class="table-btn" href="https://www.udemy.com/course/aws-certified-cloud-practitioner-new/" target="_blank" rel="noopener">Visit Course</a>
+            </td>
+            <td>One-time purchase</td>
+            <td>Medium to long</td>
+            <td>Lifetime access</td>
+            <td>Yes</td>
+            <td>Cloud fundamentals, exam prep</td>
+            <td>Practical exam-style learning</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Become an IT Support Technician</strong>
+              Professional support path
+            </td>
+            <td>
+              LinkedIn Learning
+              <br><br>
+              <a class="table-btn" href="https://www.linkedin.com/learning/paths/become-an-it-support-technician" target="_blank" rel="noopener">Visit Course</a>
+            </td>
+            <td>Subscription</td>
+            <td>Learning path</td>
+            <td>Access while subscribed</td>
+            <td>Yes</td>
+            <td>Professional IT upskilling</td>
+            <td>Short role-based modules</td>
+          </tr>`
+      },
+
+      "AI & Machine Learning": {
+        best1: "Best for structured machine learning foundations: Coursera",
+        best2: "Best for practical coding-based learning: Udemy",
+        best3: "Best for professional concept-building: LinkedIn Learning",
+        rows: `
+          <tr>
+            <td>
+              <strong>Machine Learning Specialization</strong>
+              Structured ML foundations
+            </td>
+            <td>
+              Coursera
+              <br><br>
+              <a class="table-btn" href="https://www.coursera.org/specializations/machine-learning-introduction" target="_blank" rel="noopener">Visit Course</a>
+            </td>
+            <td>Subscription / free trial</td>
+            <td>Multi-course specialization</td>
+            <td>Access while subscribed</td>
+            <td>Yes</td>
+            <td>Structured ML learning</td>
+            <td>Academic-style program</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Machine Learning A-Z</strong>
+              Hands-on ML projects
+            </td>
+            <td>
+              Udemy
+              <br><br>
+              <a class="table-btn" href="https://www.udemy.com/course/machinelearning/" target="_blank" rel="noopener">Visit Course</a>
+            </td>
+            <td>One-time purchase</td>
+            <td>Long-form course</td>
+            <td>Lifetime access</td>
+            <td>Yes</td>
+            <td>Practical coding and projects</td>
+            <td>Project-led training</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Machine Learning with Python</strong>
+              Professional ML introduction
+            </td>
+            <td>
+              LinkedIn Learning
+              <br><br>
+              <a class="table-btn" href="https://www.linkedin.com/learning/machine-learning-with-python-foundations" target="_blank" rel="noopener">Visit Course</a>
+            </td>
+            <td>Subscription</td>
+            <td>Short to medium</td>
+            <td>Access while subscribed</td>
+            <td>Yes</td>
+            <td>Professional upskilling</td>
+            <td>Short structured lessons</td>
+          </tr>`
+      },
+
+      "Digital Marketing": {
+        best1: "Best for structured certificates: Coursera",
+        best2: "Best for broad practical marketing skills: Udemy",
+        best3: "Best for professional marketing upskilling: LinkedIn Learning",
+        rows: `
+          <tr>
+            <td>
+              <strong>Foundations of Digital Marketing and E-commerce</strong>
+              Beginner marketing foundations
+            </td>
+            <td>
+              Coursera
+              <br><br>
+              <a class="table-btn" href="https://www.coursera.org/learn/foundations-of-digital-marketing-and-e-commerce" target="_blank" rel="noopener">Visit Course</a>
+            </td>
+            <td>Subscription / free trial</td>
+            <td>Short course</td>
+            <td>Access while subscribed</td>
+            <td>Yes</td>
+            <td>Beginners, structured learning</td>
+            <td>Certificate-style lessons</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Complete Digital Marketing Course</strong>
+              Wide practical marketing coverage
+            </td>
+            <td>
+              Udemy
+              <br><br>
+              <a class="table-btn" href="https://www.udemy.com/course/learn-digital-marketing-course/" target="_blank" rel="noopener">Visit Course</a>
+            </td>
+            <td>One-time purchase</td>
+            <td>Long-form course</td>
+            <td>Lifetime access</td>
+            <td>Yes</td>
+            <td>Skill building, broad coverage</td>
+            <td>Practical videos + exercises</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Digital Marketing Foundations</strong>
+              Professional marketing introduction
+            </td>
+            <td>
+              LinkedIn Learning
+              <br><br>
+              <a class="table-btn" href="https://www.linkedin.com/learning/digital-marketing-foundations-26945172" target="_blank" rel="noopener">Visit Course</a>
+            </td>
+            <td>Subscription</td>
+            <td>Short to medium</td>
+            <td>Access while subscribed</td>
+            <td>Yes</td>
+            <td>Professional upskilling</td>
+            <td>Short structured lessons</td>
+          </tr>`
+      },
+
+      "Business & Management": {
+        best1: "Best for structured business foundations: Coursera",
+        best2: "Best for affordable practical management learning: Udemy",
+        best3: "Best for workplace leadership development: LinkedIn Learning",
+        rows: `
+          <tr>
+            <td>
+              <strong>Business Foundations Specialization</strong>
+              Core business skills
+            </td>
+            <td>
+              Coursera
+              <br><br>
+              <a class="table-btn" href="https://www.coursera.org/specializations/wharton-business-foundations" target="_blank" rel="noopener">Visit Course</a>
+            </td>
+            <td>Subscription / free trial</td>
+            <td>Multi-course specialization</td>
+            <td>Access while subscribed</td>
+            <td>Yes</td>
+            <td>Structured business learning</td>
+            <td>Academic-style program</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>An Entire MBA in 1 Course</strong>
+              Broad practical business course
+            </td>
+            <td>
+              Udemy
+              <br><br>
+              <a class="table-btn" href="https://www.udemy.com/course/an-entire-mba-in-1-courseaward-winning-business-school-prof/" target="_blank" rel="noopener">Visit Course</a>
+            </td>
+            <td>One-time purchase</td>
+            <td>Long-form course</td>
+            <td>Lifetime access</td>
+            <td>Yes</td>
+            <td>Practical business skills</td>
+            <td>Applied business lessons</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Become a Manager</strong>
+              Professional management path
+            </td>
+            <td>
+              LinkedIn Learning
+              <br><br>
+              <a class="table-btn" href="https://www.linkedin.com/learning/paths/become-a-manager" target="_blank" rel="noopener">Visit Course</a>
+            </td>
+            <td>Subscription</td>
+            <td>Learning path</td>
+            <td>Access while subscribed</td>
+            <td>Yes</td>
+            <td>Leadership and workplace growth</td>
+            <td>Short role-based modules</td>
+          </tr>`
+      },
+
+      "Finance & Investing": {
+        best1: "Best for structured finance learning: Coursera",
+        best2: "Best for budget-friendly investing skills: Udemy",
+        best3: "Best for concise professional finance lessons: LinkedIn Learning",
+        rows: `
+          <tr>
+            <td>
+              <strong>Finance for Non-Financial Professionals</strong>
+              Finance foundations
+            </td>
+            <td>
+              Coursera
+              <br><br>
+              <a class="table-btn" href="https://www.coursera.org/learn/finance-for-non-finance" target="_blank" rel="noopener">Visit Course</a>
+            </td>
+            <td>Subscription / free trial</td>
+            <td>Short course</td>
+            <td>Access while subscribed</td>
+            <td>Yes</td>
+            <td>Beginners, business finance basics</td>
+            <td>Structured academic lessons</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Investing in Stocks</strong>
+              Practical investing course
+            </td>
+            <td>
+              Udemy
+              <br><br>
+              <a class="table-btn" href="https://www.udemy.com/course/investing-in-stocks/" target="_blank" rel="noopener">Visit Course</a>
+            </td>
+            <td>One-time purchase</td>
+            <td>Medium course</td>
+            <td>Lifetime access</td>
+            <td>Yes</td>
+            <td>Practical investing skills</td>
+            <td>Applied investment teaching</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Finance Foundations</strong>
+              Professional finance overview
+            </td>
+            <td>
+              LinkedIn Learning
+              <br><br>
+              <a class="table-btn" href="https://www.linkedin.com/learning/finance-foundations" target="_blank" rel="noopener">Visit Course</a>
+            </td>
+            <td>Subscription</td>
+            <td>Short to medium</td>
+            <td>Access while subscribed</td>
+            <td>Yes</td>
+            <td>Professional upskilling</td>
+            <td>Short workplace-focused lessons</td>
+          </tr>`
+      }
+    };
+
+    const comp = comparisons[pick.label];
 
     document.getElementById("result").innerHTML = `
-      <p><strong>Recommendation:</strong> Start with <strong>${pick.label}</strong> (${outcomeText}).</p>
+      <p><strong>Recommendation:</strong> Start with <strong>${pick.label}</strong>.</p>
       <p>${levelText} options are best for your goal (${goalText}).</p>
-      <p><a class="course-link-btn" href="${pick.page}">Go to ${pick.label} courses →</a></p>
+      <p>${levelAdvice}</p>
+
+      <div class="finder-highlights">
+        <p><strong>${comp.best1}</strong></p>
+        <p><strong>${comp.best2}</strong></p>
+        <p><strong>${comp.best3}</strong></p>
+      </div>
+
+      <div class="comparison-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Course</th>
+              <th>Provider</th>
+              <th>Cost Model</th>
+              <th>Estimated Length</th>
+              <th>Access</th>
+              <th>Certificate</th>
+              <th>Best For</th>
+              <th>Learning Style</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${comp.rows}
+          </tbody>
+        </table>
+      </div>
+
+      <p class="finder-note">
+        Comparison note: pricing, access terms, and course details can change over time. Always verify the latest information on the provider page before enrolling.
+      </p>
+
+      <p style="margin-top:16px;">
+        <a class="course-link-btn" href="${pick.page}">Go to ${pick.label} courses →</a>
+      </p>
     `;
   }
 </script>
