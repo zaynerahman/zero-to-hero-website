@@ -58,7 +58,7 @@ body {
 
 .topbar-right {
   display: flex;
-  gap: 12px;
+  gap: 8px;
 }
 
 .topbar-right a {
