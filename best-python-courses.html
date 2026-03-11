@@ -265,3 +265,13 @@ Disclaimer: Some links on this site may be affiliate links. If you click and enr
 
 </body>
 </html>
+<script>
+function trackCourseClick(courseName, provider) {
+  if (typeof gtag === "function") {
+    gtag('event', 'course_click', {
+      course_name: courseName,
+      provider: provider
+    });
+  }
+}
+</script>
