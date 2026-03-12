@@ -188,6 +188,10 @@ body {
   font-size: 22px;
 }
 
+.course-list h2{
+  text-align: center;
+}
+
 /* Course Grid */
 .course-grid {
   display: grid;
