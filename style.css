@@ -121,6 +121,14 @@ body {
   font-size: 16px;
 }
 
+.homepage homepage-hero-left{
+  position: relative
+}
+.homepage .homepage-hero-left img{
+  position: relative;
+  left: 100px
+}
+
 /* CTA Buttons */
 .cta-button {
   display: inline-block;
