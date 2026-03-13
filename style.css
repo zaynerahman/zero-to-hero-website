@@ -121,12 +121,12 @@ body {
   font-size: 16px;
 }
 
-.homepage homepage-hero-left{
+.homepage .homepage-hero-left{
   position: relative
 }
 .homepage .homepage-hero-left img{
   position: relative;
-  left: 100px
+  left: 120px
 }
 
 /* CTA Buttons */
