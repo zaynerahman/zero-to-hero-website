@@ -350,6 +350,28 @@ margin:0 30px;
   line-height: 1.5;
 }
 
+.course-badge{
+display:inline-block;
+font-size:12px;
+font-weight:700;
+padding:5px 12px;
+border-radius:20px;
+margin-bottom:10px;
+letter-spacing:0.3px;
+}
+
+
+.badge-popular{
+background:#ffe9a8;
+color:#7a5c00;
+border:1px solid #f2d675;
+}
+.badge-career{
+background:#d9ecff;
+color:#0b4a8b;
+border:1px solid #b9d9ff;
+}
+
 /* Course Buttons */
 .course-link-btn {
   display: inline-block;
