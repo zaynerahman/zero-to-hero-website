@@ -76,8 +76,10 @@ Build valuable digital marketing skills in SEO, social media, analytics, content
 <div class="course-card">
 <h3>Google Digital Marketing & E-commerce Professional Certificate</h3>
 <p>A broader certificate route for learners who want more structured, job-relevant digital marketing training.</p>
+<div class="course-actions">
 <a class="course-link-btn" href="https://www.coursera.org/professional-certificates/google-digital-marketing-ecommerce" target="_blank" rel="noopener">View Program</a>
-</div>
+<button class="video-btn" type="button" onclick="openVideo('9mUoqo10jpY')" ria-label="Watch course review">
+▶ </button>
 </div>
 </section>
 
@@ -173,6 +175,66 @@ Disclaimer: Some links on this site may be affiliate links. If you click and enr
 </p>
 </footer>
 <script src="script.js"></script>
+
+
+<div id="videoModal" class="video-modal">
+<div class="video-modal-content">
+<button class="close-video" type="button" onclick="closeVideo()" aria-label="Close video">✕</button>
+<iframe
+
+      id="videoFrame"
+
+      src=""
+
+      title="Course review video"
+
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+
+      allowfullscreen>
+</iframe>
+</div>
+</div>
+<script>
+
+function openVideo(videoId) {
+
+  const modal = document.getElementById("videoModal");
+
+  const frame = document.getElementById("videoFrame");
+
+  frame.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+
+  modal.style.display = "flex";
+
+}
+
+function closeVideo() {
+
+  const modal = document.getElementById("videoModal");
+
+  const frame = document.getElementById("videoFrame");
+
+  frame.src = "";
+
+  modal.style.display = "none";
+
+}
+
+window.addEventListener("click", function (event) {
+
+  const modal = document.getElementById("videoModal");
+
+  if (event.target === modal) {
+
+    closeVideo();
+
+  }
+
+});
+</script>
+
+
+
 </body>
 </html>
  
