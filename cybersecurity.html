@@ -31,7 +31,7 @@ gtag('config', 'G-BPX7LSMBE');
 </div>
 <p class="main-tagline">
 
-Online learning to master that lucrative career skill, ace that study exam, or become the expert in your field
+      Online learning to master that lucrative career skill, ace that study exam, or become the expert in your field
 </p>
 </div>
 <nav class="topbar-right">
@@ -48,20 +48,37 @@ Online learning to master that lucrative career skill, ace that study exam, or b
 <h2>Cybersecurity</h2>
 <p>
 
-Build essential cybersecurity skills including network security, threat awareness, security operations, and defensive best practices for modern digital environments across four major learning platforms.
+    Build essential cybersecurity skills including network security, threat awareness, security operations, and defensive best practices for modern digital environments across four major learning platforms.
 </p>
 <a href="guides.html" class="cta-button">Explore More Learning Guides</a>
 </section>
-
 <section class="course-list">
 <h2>Coursera Picks</h2>
 <div class="course-grid">
 <div class="course-card">
- <span class="course-badge badge-popular">Popular Course</span>
-<span class="course-badge badge-career">Career Path Course</span>   
+<span class="course-badge badge-popular">Popular Course</span>
+<span class="course-badge badge-career">Career Path Course</span>
 <h3>Google Cybersecurity Professional Certificate</h3>
 <p>A beginner-friendly professional certificate covering security foundations, threats, tools, and job-ready skills.</p>
-<a class="course-link-btn" href="https://www.coursera.org/professional-certificates/google-cybersecurity" target="_blank" rel="noopener">View Program</a>
+<div class="course-actions">
+<a class="course-link-btn"
+
+           href="https://www.coursera.org/professional-certificates/google-cybersecurity"
+
+           target="_blank"
+
+           rel="noopener">View Program</a>
+<button class="video-btn"
+
+                type="button"
+
+                onclick="openVideo('lZ6p_djgNWI')"
+
+                aria-label="Watch course review">
+
+          ▶
+</button>
+</div>
 </div>
 <div class="course-card">
 <h3>Introduction to Cyber Security</h3>
@@ -80,12 +97,11 @@ Build essential cybersecurity skills including network security, threat awarenes
 </div>
 </div>
 </section>
-
 <section class="course-list">
 <h2>Udemy Picks</h2>
 <div class="course-grid">
 <div class="course-card">
-<span class="course-badge badge-popular">Popular Course</span>    
+<span class="course-badge badge-popular">Popular Course</span>
 <h3>The Complete Cyber Security Course: Hackers Exposed</h3>
 <p>A popular practical course introducing threats, attackers, and defensive thinking for beginners.</p>
 <a class="course-link-btn" href="https://www.udemy.com/course/the-complete-internet-security-privacy-course-volume-1/" target="_blank" rel="noopener">View Course</a>
@@ -107,7 +123,6 @@ Build essential cybersecurity skills including network security, threat awarenes
 </div>
 </div>
 </section>
-
 <section class="course-list">
 <h2>LinkedIn Learning Picks</h2>
 <div class="course-grid">
@@ -133,7 +148,6 @@ Build essential cybersecurity skills including network security, threat awarenes
 </div>
 </div>
 </section>
-
 <section class="course-list">
 <h2>edX Picks</h2>
 <div class="course-grid">
@@ -160,7 +174,6 @@ Build essential cybersecurity skills including network security, threat awarenes
 </div>
 </section>
 </main>
-
 <footer class="footer">
 <p>© Zero to Hero — Helping learners build future-ready skills.</p>
 <p class="footer-links">
@@ -169,10 +182,65 @@ Build essential cybersecurity skills including network security, threat awarenes
 </p>
 <p>
 
-Disclaimer: Some links on this site may be affiliate links. If you click and enroll, Zero to Hero may earn a commission at no extra cost to you.
+    Disclaimer: Some links on this site may be affiliate links. If you click and enroll, Zero to Hero may earn a commission at no extra cost to you.
 </p>
 </footer>
 <script src="script.js"></script>
+<div id="videoModal" class="video-modal">
+<div class="video-modal-content">
+<button class="close-video" type="button" onclick="closeVideo()" aria-label="Close video">✕</button>
+<iframe
+
+      id="videoFrame"
+
+      src=""
+
+      title="Course review video"
+
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+
+      allowfullscreen>
+</iframe>
+</div>
+</div>
+<script>
+
+function openVideo(videoId) {
+
+  const modal = document.getElementById("videoModal");
+
+  const frame = document.getElementById("videoFrame");
+
+  frame.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+
+  modal.style.display = "flex";
+
+}
+
+function closeVideo() {
+
+  const modal = document.getElementById("videoModal");
+
+  const frame = document.getElementById("videoFrame");
+
+  frame.src = "";
+
+  modal.style.display = "none";
+
+}
+
+window.addEventListener("click", function (event) {
+
+  const modal = document.getElementById("videoModal");
+
+  if (event.target === modal) {
+
+    closeVideo();
+
+  }
+
+});
+</script>
 </body>
 </html>
  
