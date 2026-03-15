@@ -31,7 +31,7 @@ gtag('config', 'G-BPX7LSMBE');
 </div>
 <p class="main-tagline">
 
-Online learning to master that lucrative career skill, ace that study exam, or become the expert in your field
+      Online learning to master that lucrative career skill, ace that study exam, or become the expert in your field
 </p>
 </div>
 <nav class="topbar-right">
@@ -48,11 +48,10 @@ Online learning to master that lucrative career skill, ace that study exam, or b
 <h2>Finance & Investing</h2>
 <p>
 
-Build valuable finance and investing skills including personal finance, financial markets, investment thinking, and business finance fundamentals across four major learning platforms.
+    Build valuable finance and investing skills including personal finance, financial markets, investment thinking, and business finance fundamentals across four major learning platforms.
 </p>
 <a href="best-business-courses.html" class="cta-button">Explore Related Business Guide</a>
 </section>
-
 <section class="course-list">
 <h2>Coursera Picks</h2>
 <div class="course-grid">
@@ -62,10 +61,13 @@ Build valuable finance and investing skills including personal finance, financia
 <a class="course-link-btn" href="https://www.coursera.org/learn/finance-for-non-finance" target="_blank" rel="noopener">View Course</a>
 </div>
 <div class="course-card">
-<span class="course-badge">Popular Course</span>
+<span class="course-badge badge-popular">Popular Course</span>
 <h3>Financial Markets</h3>
 <p>A well-known course that explains how markets work, how risk is managed, and how financial systems operate.</p>
+<div class="course-actions">
 <a class="course-link-btn" href="https://www.coursera.org/learn/financial-markets-global" target="_blank" rel="noopener">View Course</a>
+<button class="video-btn" type="button" onclick="openVideo('ihWH0sNDano')" aria-label="Watch course review">▶</button>
+</div>
 </div>
 <div class="course-card">
 <span class="course-badge badge-career">Career Path Course</span>
@@ -80,7 +82,6 @@ Build valuable finance and investing skills including personal finance, financia
 </div>
 </div>
 </section>
-
 <section class="course-list">
 <h2>Udemy Picks</h2>
 <div class="course-grid">
@@ -90,10 +91,14 @@ Build valuable finance and investing skills including personal finance, financia
 <a class="course-link-btn" href="https://www.udemy.com/course/introduction-to-finance-accounting-modeling-and-valuation/" target="_blank" rel="noopener">View Course</a>
 </div>
 <div class="course-card">
- <span class="course-badge badge-popular">Popular Course</span><span class="course-badge">Popular Course</span>   
+<span class="course-badge badge-popular">Popular Course</span>
 <h3>The Complete Financial Analyst Course</h3>
 <p>Helpful for learners interested in corporate finance, financial analysis, and analytical modelling skills.</p>
 <a class="course-link-btn" href="https://www.udemy.com/course/the-complete-financial-analyst-course/" target="_blank" rel="noopener">View Course</a>
+<p style="font-size:14px; line-height:1.5; margin-top:12px;">
+<strong>Written review:</strong> Learner feedback often highlights this course for its practical Excel work and its solid introduction to accounting and finance concepts.
+<a href="https://www.reddit.com/r/FinancialCareers/comments/eldnpe/udemy_financial_analyst_course_2020/" target="_blank" rel="noopener">Read review</a>
+</p>
 </div>
 <div class="course-card">
 <h3>Investing in Stocks: The Complete Course</h3>
@@ -107,7 +112,6 @@ Build valuable finance and investing skills including personal finance, financia
 </div>
 </div>
 </section>
-
 <section class="course-list">
 <h2>LinkedIn Learning Picks</h2>
 <div class="course-grid">
@@ -133,7 +137,6 @@ Build valuable finance and investing skills including personal finance, financia
 </div>
 </div>
 </section>
-
 <section class="course-list">
 <h2>edX Picks</h2>
 <div class="course-grid">
@@ -141,6 +144,10 @@ Build valuable finance and investing skills including personal finance, financia
 <h3>Corporate Finance Professional Certificate</h3>
 <p>A strong university-backed edX pathway from ColumbiaX covering core corporate finance principles, valuation, and financial decision-making.</p>
 <a class="course-link-btn" href="https://www.edx.org/certificates/professional-certificate/columbiax-corporate-finance" target="_blank" rel="noopener">View Program</a>
+<p style="font-size:14px; line-height:1.5; margin-top:12px;">
+<strong>Written review:</strong> Independent reviewers describe this program as a strong route for learning how to value firms and make sound financial and investment decisions.
+<a href="https://www.classcentral.com/course/columbiax-corporate-finance-18411" target="_blank" rel="noopener">Read review</a>
+</p>
 </div>
 <div class="course-card">
 <h3>Foundations of Modern Finance I</h3>
@@ -160,7 +167,6 @@ Build valuable finance and investing skills including personal finance, financia
 </div>
 </section>
 </main>
-
 <footer class="footer">
 <p>© Zero to Hero — Helping learners build future-ready skills.</p>
 <p class="footer-links">
@@ -169,10 +175,65 @@ Build valuable finance and investing skills including personal finance, financia
 </p>
 <p>
 
-Disclaimer: Some links on this site may be affiliate links. If you click and enroll, Zero to Hero may earn a commission at no extra cost to you.
+    Disclaimer: Some links on this site may be affiliate links. If you click and enroll, Zero to Hero may earn a commission at no extra cost to you.
 </p>
 </footer>
 <script src="script.js"></script>
+<div id="videoModal" class="video-modal">
+<div class="video-modal-content">
+<button class="close-video" type="button" onclick="closeVideo()" aria-label="Close video">✕</button>
+<iframe
+
+      id="videoFrame"
+
+      src=""
+
+      title="Course review video"
+
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+
+      allowfullscreen>
+</iframe>
+</div>
+</div>
+<script>
+
+function openVideo(videoId) {
+
+  const modal = document.getElementById("videoModal");
+
+  const frame = document.getElementById("videoFrame");
+
+  frame.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+
+  modal.style.display = "flex";
+
+}
+
+function closeVideo() {
+
+  const modal = document.getElementById("videoModal");
+
+  const frame = document.getElementById("videoFrame");
+
+  frame.src = "";
+
+  modal.style.display = "none";
+
+}
+
+window.addEventListener("click", function (event) {
+
+  const modal = document.getElementById("videoModal");
+
+  if (event.target === modal) {
+
+    closeVideo();
+
+  }
+
+});
+</script>
 </body>
 </html>
  
