@@ -31,7 +31,7 @@ gtag('config', 'G-BPX7LSMBE');
 </div>
 <p class="main-tagline">
 
-Online learning to master that lucrative career skill, ace that study exam, or become the expert in your field
+      Online learning to master that lucrative career skill, ace that study exam, or become the expert in your field
 </p>
 </div>
 <nav class="topbar-right">
@@ -48,20 +48,37 @@ Online learning to master that lucrative career skill, ace that study exam, or b
 <h2>AI & Machine Learning</h2>
 <p>
 
-Explore artificial intelligence and machine learning courses that help you build practical skills in ML concepts, AI tools, models, and applied problem-solving across four major learning platforms.
+    Explore artificial intelligence and machine learning courses that help you build practical skills in ML concepts, AI tools, models, and applied problem-solving across four major learning platforms.
 </p>
 <a href="guides.html" class="cta-button">Explore More Learning Guides</a>
 </section>
-
 <section class="course-list">
 <h2>Coursera Picks</h2>
 <div class="course-grid">
 <div class="course-card">
-<h3>Machine Learning Specialization</h3>
 <span class="course-badge badge-popular">Popular Course</span>
 <span class="course-badge badge-career">Career Path Course</span>
+<h3>Machine Learning Specialization</h3>
 <p>A highly respected beginner-friendly machine learning pathway covering core concepts and applied ML workflows.</p>
-<a class="course-link-btn" href="https://www.coursera.org/specializations/machine-learning-introduction" target="_blank" rel="noopener">View Program</a>
+<div class="course-actions">
+<a class="course-link-btn"
+
+           href="https://www.coursera.org/specializations/machine-learning-introduction"
+
+           target="_blank"
+
+           rel="noopener">View Program</a>
+<button class="video-btn"
+
+                type="button"
+
+                onclick="openVideo('4nsdARJGzJ0')"
+
+                aria-label="Watch course review">
+
+          ▶
+</button>
+</div>
 </div>
 <div class="course-card">
 <h3>AI For Everyone</h3>
@@ -80,13 +97,12 @@ Explore artificial intelligence and machine learning courses that help you build
 </div>
 </div>
 </section>
-
 <section class="course-list">
 <h2>Udemy Picks</h2>
 <div class="course-grid">
 <div class="course-card">
-<h3>Machine Learning A-Z</h3>
 <span class="course-badge badge-popular">Popular Course</span>
+<h3>Machine Learning A-Z</h3>
 <p>A very popular practical machine learning course for beginners who want a project-driven approach.</p>
 <a class="course-link-btn" href="https://www.udemy.com/course/machinelearning/" target="_blank" rel="noopener">View Course</a>
 </div>
@@ -107,7 +123,6 @@ Explore artificial intelligence and machine learning courses that help you build
 </div>
 </div>
 </section>
-
 <section class="course-list">
 <h2>LinkedIn Learning Picks</h2>
 <div class="course-grid">
@@ -133,7 +148,6 @@ Explore artificial intelligence and machine learning courses that help you build
 </div>
 </div>
 </section>
-
 <section class="course-list">
 <h2>edX Picks</h2>
 <div class="course-grid">
@@ -160,7 +174,6 @@ Explore artificial intelligence and machine learning courses that help you build
 </div>
 </section>
 </main>
-
 <footer class="footer">
 <p>© Zero to Hero — Helping learners build future-ready skills.</p>
 <p class="footer-links">
@@ -169,10 +182,65 @@ Explore artificial intelligence and machine learning courses that help you build
 </p>
 <p>
 
-Disclaimer: Some links on this site may be affiliate links. If you click and enroll, Zero to Hero may earn a commission at no extra cost to you.
+    Disclaimer: Some links on this site may be affiliate links. If you click and enroll, Zero to Hero may earn a commission at no extra cost to you.
 </p>
 </footer>
 <script src="script.js"></script>
+<div id="videoModal" class="video-modal">
+<div class="video-modal-content">
+<button class="close-video" type="button" onclick="closeVideo()" aria-label="Close video">✕</button>
+<iframe
+
+      id="videoFrame"
+
+      src=""
+
+      title="Course review video"
+
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+
+      allowfullscreen>
+</iframe>
+</div>
+</div>
+<script>
+
+function openVideo(videoId) {
+
+  const modal = document.getElementById("videoModal");
+
+  const frame = document.getElementById("videoFrame");
+
+  frame.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+
+  modal.style.display = "flex";
+
+}
+
+function closeVideo() {
+
+  const modal = document.getElementById("videoModal");
+
+  const frame = document.getElementById("videoFrame");
+
+  frame.src = "";
+
+  modal.style.display = "none";
+
+}
+
+window.addEventListener("click", function (event) {
+
+  const modal = document.getElementById("videoModal");
+
+  if (event.target === modal) {
+
+    closeVideo();
+
+  }
+
+});
+</script>
 </body>
 </html>
  
