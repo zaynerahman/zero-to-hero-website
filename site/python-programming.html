@@ -12,13 +12,13 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BPX7LSMBE"></script>
 <script>
 
-    window.dataLayer = window.dataLayer || [];
+window.dataLayer = window.dataLayer || [];
 
-    function gtag(){dataLayer.push(arguments);}
+function gtag(){dataLayer.push(arguments);}
 
-    gtag('js', new Date());
+gtag('js', new Date());
 
-    gtag('config', 'G-BPX7LSMBE');
+gtag('config', 'G-BPX7LSMBE');
 </script>
 </head>
 <body>
@@ -28,7 +28,7 @@
 </div>
 <div class="topbar-center">
 <div class="brand-badge">
-<img class="brand-badge-img" src="images/TechnologyBadge.png?v=2" alt="Zero to Hero badge" />
+<img class="brand-badge-img" src="images/PythonProgBadge.png" alt="Zero to Hero badge" />
 </div>
 <p class="main-tagline">
 
@@ -83,7 +83,6 @@
 <p>Great for learners who want a more career-focused path using Python for scripting and automation.</p>
 <a class="course-link-btn" href="https://www.coursera.org/professional-certificates/google-it-automation" target="_blank" rel="noopener">View Program</a>
 </div>
-
 </div>
 </section>
 <section class="course-list">
@@ -94,6 +93,9 @@
 <h3>The Complete Python Bootcamp From Zero to Hero in Python</h3>
 <p>A very popular practical Python bootcamp focused on hands-on learning and project-style progression.</p>
 <a class="course-link-btn" href="https://www.udemy.com/course/complete-python-bootcamp/" target="_blank" rel="noopener">View Course</a>
+<p class="course-review">
+<strong>Written review:</strong> A strong option for learners who want one main course that covers Python basics, real coding practice, and gradual progression into more useful projects.
+</p>
 </div>
 <div class="course-card">
 <h3>100 Days of Code: The Complete Python Pro Bootcamp</h3>
@@ -144,6 +146,9 @@
 <h3>CS50’s Introduction to Programming with Python</h3>
 <p>A strong university-backed beginner option from HarvardX for learners who want a rigorous introduction to Python.</p>
 <a class="course-link-btn" href="https://www.edx.org/learn/python/harvard-university-cs50-s-introduction-to-programming-with-python" target="_blank" rel="noopener">View Course</a>
+<p class="course-review">
+<strong>Written review:</strong> Best for learners who want a more structured academic style, with clear programming foundations, problem-solving practice, and stronger discipline than a typical lightweight beginner course.
+</p>
 </div>
 <div class="course-card">
 <h3>Introduction to Python Programming Professional Certificate</h3>
@@ -162,8 +167,6 @@
 </div>
 </div>
 </section>
-
- 
 </main>
 <footer class="footer">
 <p>© Zero to Hero — Helping learners build future-ready skills.</p>
@@ -177,19 +180,61 @@
 </p>
 </footer>
 <script src="./script.js"></script>
-
 <div id="videoModal" class="video-modal">
 <div class="video-modal-content">
-<span class="close-video" onclick="closeVideo()">✕</span>
-<iframe id="videoFrame"
-src=""
-allowfullscreen>
+<button class="close-video" type="button" onclick="closeVideo()" aria-label="Close video">✕</button>
+<iframe
+
+      id="videoFrame"
+
+      src=""
+
+      title="Course review video"
+
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+
+      allowfullscreen>
 </iframe>
 </div>
 </div>
- 
+<script>
 
+function openVideo(videoId) {
 
+  const modal = document.getElementById("videoModal");
+
+  const frame = document.getElementById("videoFrame");
+
+  frame.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+
+  modal.style.display = "flex";
+
+}
+
+function closeVideo() {
+
+  const modal = document.getElementById("videoModal");
+
+  const frame = document.getElementById("videoFrame");
+
+  frame.src = "";
+
+  modal.style.display = "none";
+
+}
+
+window.addEventListener("click", function (event) {
+
+  const modal = document.getElementById("videoModal");
+
+  if (event.target === modal) {
+
+    closeVideo();
+
+  }
+
+});
+</script>
 </body>
 </html>
  
