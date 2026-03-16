@@ -40,6 +40,8 @@ body {
 
 }
 
+
+
 .topbar-left {
 
   display: flex;
@@ -114,7 +116,9 @@ body {
 
   justify-content: flex-end;
 
-  gap: 8px;
+  align-items: center;
+
+  gap: 16px;
 
   flex-wrap: wrap;
 
@@ -122,29 +126,58 @@ body {
 
 .topbar-right a {
 
-  background: rgba(243, 237, 237, 0.986);
+  display: inline-block;
 
-  padding: 2px 10px;
+  padding: 7px 14px;
 
-  border-radius: 8px;
+  border-radius: 999px;
 
   text-decoration: none;
 
-  font-weight: 700;
+  font-weight: 900;
 
-  color: black;
+  font-style: italic;
 
-  border: 1px solid rgba(243, 235, 235, 0.945);
+  text-transform: uppercase;
 
-  transition: all 0.2s ease;
+  font-size: 13px;
+
+  letter-spacing: 0.4px;
+
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #0b5ed7, #3bb8ff);
+
+  border: 1px solid rgba(255,255,255,0.25);
+
+  box-shadow:
+
+    0 0 8px rgba(59,184,255,0.35),
+
+    inset 0 1px 0 rgba(255,255,255,0.35);
+
+  text-shadow: 0 1px 0 rgba(0,0,0,0.35);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
 
 }
 
 .topbar-right a:hover {
 
-  text-decoration: underline;
+  transform: translateY(-2px);
+
+  box-shadow:
+
+    0 0 12px rgba(59,184,255,0.5),
+
+    0 6px 14px rgba(0,0,0,0.2),
+
+    inset 0 1px 0 rgba(255,255,255,0.4);
+
+  opacity: 0.98;
 
 }
+ 
 
 /* Homepage-only top image adjustment */
 
@@ -163,11 +196,6 @@ body {
 }
 
 
-topbar{
-position:relative;
-height:140px;
-overflow:hidden;
-}
 
 
 .homepage .topbar {
@@ -221,7 +249,7 @@ left: 0;
 }
 
 
-@media (max-width: 50px) {
+@media (max-width: 900px) {
 
 
 
@@ -1003,6 +1031,14 @@ left: 0;
     justify-content: center;
 
     padding-top: 18px;
+
+
+
+
+
+
+
+    
 
   }
 
