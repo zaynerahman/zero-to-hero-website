@@ -162,6 +162,81 @@ body {
 
 }
 
+
+topbar{
+position:relative;
+height:140px;
+overflow:hidden;
+}
+
+
+.homepage .topbar {
+
+position: relative;
+
+overflow: hidden;
+
+}
+
+.homepage-top-text-overlay {
+
+position: absolute;
+
+top: 18px;
+
+right: 400px;
+
+width: 350px;
+
+height: auto;
+
+z-index: 5;
+
+pointer-events: none;
+
+}
+
+.homepage .topbar-center {
+
+position: relative;
+
+left: -40px;
+
+}
+
+@media (max-width: 900px) {
+
+.homepage-top-text-overlay {
+
+display: none;
+
+}
+
+.homepage .topbar-center {
+
+left: 0;
+
+}
+
+}
+
+
+@media (max-width: 50px) {
+
+
+
+  .homepage .topbar-center {
+
+    left: 0;
+
+  }
+
+}
+ 
+
+
+
+
 /* Hero Section */
 
 .hero {
