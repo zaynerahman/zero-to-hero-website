@@ -58,7 +58,7 @@ body {
 
   display: block;
 
-  margin-bottom: -38px;
+  margin-bottom: -39px;
 
 }
 
@@ -98,6 +98,13 @@ body {
 
 }
 
+
+/*Move Home page Badge Only*/
+.homepage .brand-badge{
+  position: relative;
+  left: -100px;
+}
+
 .main-tagline {
 
   margin: 16px 0 0 0;
@@ -118,7 +125,7 @@ body {
 
   align-items: center;
 
-  gap: 16px;
+  gap: 15px;
 
   flex-wrap: wrap;
 
@@ -148,7 +155,7 @@ body {
 
   background: linear-gradient(135deg, #0b5ed7, #3bb8ff);
 
-  border: 1px solid rgba(255,255,255,0.25);
+  border: 1px solid rgba(248, 243, 243, 0.911);
 
   box-shadow:
 
@@ -191,7 +198,7 @@ body {
 
   position: relative;
 
-  left: 120px;
+  left: 110px;
 
 }
 
@@ -212,7 +219,7 @@ position: absolute;
 
 top: 18px;
 
-right: 400px;
+right: 500px;
 
 width: 350px;
 
@@ -228,7 +235,7 @@ pointer-events: none;
 
 position: relative;
 
-left: -40px;
+left: -80px;
 
 }
 
