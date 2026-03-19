@@ -604,3 +604,25 @@ body {
    min-height: auto;
  }
 }
+.review-form textarea,
+
+.review-form input,
+
+.review-form select {
+
+  border: 1px solid #ccc;
+
+  border-radius: 8px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.review-form label {
+
+  display: block;
+
+  text-align: left;
+
+}
+ 
