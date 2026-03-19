@@ -155,7 +155,7 @@ body {
 }
 /* Provider Logos */
 .provider-logos {
- max-width: 1100px;
+ max-width:1100px;
  margin: 40px auto;
  padding: 0 20px;
  text-align: center;
@@ -167,7 +167,7 @@ body {
  display: flex;
  justify-content: center;
  align-items: center;
- gap: 30px;
+ gap: 10px;
  flex-wrap: wrap;
  background: rgba(255, 255, 255, 0.75);
  padding: 35px 40px;
@@ -191,6 +191,21 @@ body {
 }
 .logo-edx {
  height: 60px;
+ width: auto;
+ margin: 0 30px;
+}
+.logo-springboard {
+ height: 140px;
+ width: auto;
+ margin: 0 30px;
+}
+.logo-simplilearn {
+ height: 100px;
+ width: auto;
+ margin: 0 30px;
+}
+.logo-icertglobal {
+ height: 150px;
  width: auto;
  margin: 0 30px;
 }
