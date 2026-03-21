@@ -137,6 +137,13 @@ body {
  line-height: 1.6;
  font-size: 16px;
 }
+
+.hero-tools-img{
+  display: block;
+  margin: 40px auto 0;
+  max-width: 320px;
+}
+
 /* CTA Buttons */
 .cta-button {
  display: inline-block;
