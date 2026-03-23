@@ -19,6 +19,7 @@ body {
  position: relative;
  overflow: visible;
 }
+
 .topbar-left {
  display: flex;
  justify-content: flex-start;
